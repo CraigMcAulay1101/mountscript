@@ -8,3 +8,7 @@ A bash utility script to mount &amp; unmount a server
 
 -p path [optional] - the server path to be mounted <br />
 -r [optional] - flag to unmount the server <br />
+
+# Requirements
+
+Requires SSHFS to be installed <br />
