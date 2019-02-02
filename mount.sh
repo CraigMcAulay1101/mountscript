@@ -53,7 +53,7 @@ while getopts "u:h:p:r" opt; do
         mntdir="/mnt/$hostname"
         homedir="$HOME/$hostname"
       ;;
-    u )
+    p )
         # server path to mount
         path=$OPTARG
     ;;
@@ -71,10 +71,9 @@ if [[ ! -d "$mntdir" && ! -L "$homedir" ]]; then
 
     sudo mkdir $mntdir
     sudo sshfs -o allow_other ${username}@${hostname}:/ "$mntdir"
-
-    if [ -z ${path} ]; then
+   
+    if [ ! -z ${path} ]; then
         # mount the path specified
-        echo "$mntdir/$path"
         sudo ln -s "$mntdir/$path" "$homedir"
     else
         # mount the / dir
