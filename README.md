@@ -3,7 +3,7 @@ A bash utility script to mount &amp; unmount a server
 
 # usage
 
-./mount.sh -u craig -h server -p /var/www/
+./mount.sh -u craig -h server -p var/www/
 
 # arguments
 
