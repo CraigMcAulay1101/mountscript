@@ -1,6 +1,10 @@
 # mountscript
 A bash utility script to mount &amp; unmount a server
 
+# usage
+
+./mount.sh -u craig -h server -p /var/www/
+
 # arguments
 
 [-u] username - username <br />
